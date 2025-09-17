@@ -35,7 +35,7 @@ public class cookie_script : MonoBehaviour
     void Update()
     {
         //Fix to make it every second
-        if (frames % 180 ==0)
+        if (frames % 200 ==0)
         {
             cookies += cookiesPerSecond;
         }
