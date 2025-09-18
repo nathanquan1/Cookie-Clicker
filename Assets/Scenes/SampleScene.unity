@@ -491,9 +491,11 @@ MonoBehaviour:
   cookieMultiplier: 1
   perClickCost: 20
   perSecondCost: 20
+  multiplierCost: 500
   cookieText: {fileID: 925922912}
   perSecondUpgrade: {fileID: 3883942}
   perClickUpgrade: {fileID: 1072705992}
+  multiplyUpgrade: {fileID: 2014530173}
 --- !u!4 &565784073
 Transform:
   m_ObjectHideFlags: 0

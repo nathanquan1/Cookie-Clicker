@@ -10,18 +10,19 @@ public class cookie_script : MonoBehaviour
     public int cookiesPerSecond = 0;
     public int cookies = 0;
 
-    //test
     public int frames = 0;
     public int cookieMultiplier = 1;
 
     //Starting costs:
     public int perClickCost = 20;
     public int perSecondCost = 20;
+    public int multiplierCost = 500;
 
     //Variables connecting to the text mesh pro UI
     public TextMeshProUGUI cookieText;
     public TextMeshProUGUI perSecondUpgrade; 
     public TextMeshProUGUI perClickUpgrade;
+    public TextMeshProUGUI multiplyUpgrade;
 
     // Start is called before the first frame update
     void Start()
@@ -29,13 +30,14 @@ public class cookie_script : MonoBehaviour
         cookieText.text = "Cookies: " +cookies.ToString();
         perSecondUpgrade.text = "+1 Cookies/Second Cost: "+ perSecondCost.ToString();
         perClickUpgrade.text = "+1 Cookies/Click Cost: "+perClickCost.ToString();
+        multiplyUpgrade.text = (cookieMultiplier+1)+"X Cookies/Click Cost: "+ multiplierCost.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
         //Fix to make it every second
-        if (frames % 200 ==0)
+        if (frames % 205 ==0)
         {
             cookies += cookiesPerSecond;
         }
@@ -44,6 +46,7 @@ public class cookie_script : MonoBehaviour
         cookieText.text = "Cookies: " +cookies.ToString();
         perSecondUpgrade.text = "+1 Cookies/Second Cost: "+perSecondCost.ToString();
         perClickUpgrade.text = "+1 Cookies/Click Cost: "+perClickCost.ToString();
+        multiplyUpgrade.text = (cookieMultiplier+1)+"X Cookies/Click Cost: "+ multiplierCost.ToString();
 
         frames += 1;
     }
@@ -76,10 +79,16 @@ public class cookie_script : MonoBehaviour
             perSecondCost = cookiesPerSecond + 19;
         }
     }
-//remove later ?
+//Adds 1x every time (1x,2x,3x)
     public void cookieMultiplyClick()
     {
-        cookieMultiplier = 2;
+        if (cookies >= multiplierCost)
+        {
+            cookies -= multiplierCost; 
+            cookieMultiplier += 1;
+            multiplierCost*= 4;
+        }
+        
     }
 
 }
