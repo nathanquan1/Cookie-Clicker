@@ -13,8 +13,7 @@ public class cookie_script : MonoBehaviour
     public int cookiesPerSecond = 0;
     public int cookieMultiplier = 1;
 
-    //frame counter
-    public int frames = 0;
+    public float timer = 0;
     //Upgrade costs:
     public int perClickCost = 20;
     public int perSecondCost = 20;
@@ -48,8 +47,10 @@ public class cookie_script : MonoBehaviour
     void Update()
     {
         //Basically every second
-        if (frames % 205 ==0)
+        timer += Time.deltaTime; //Seconds that passed since last frame
+        if (timer>= 1)
         {
+            timer = 0;
             cookies += cookiesPerSecond;
         }
         
@@ -59,7 +60,7 @@ public class cookie_script : MonoBehaviour
         perClickUpgrade.text = "+1 Cookies/Click Cost: "+perClickCost.ToString();
         multiplyUpgrade.text = (cookieMultiplier+1)+"X Cookies/Click Cost: "+ multiplierCost.ToString();
 
-        frames += 1;
+        
     }
 
     //Function for when cookie button is clicked
