@@ -21,6 +21,7 @@ public class cookie_script : MonoBehaviour
 
     //Text mesh pro ugui variables
     public TextMeshProUGUI cookieText;
+    public TextMeshProUGUI cookiesPerSecondText;
     public TextMeshProUGUI perSecondUpgrade; 
     public TextMeshProUGUI perClickUpgrade;
     public TextMeshProUGUI multiplyUpgrade;
@@ -38,6 +39,7 @@ public class cookie_script : MonoBehaviour
     {
         music.PlayOneShot(backgroundMusic); //Music looped
         cookieText.text = "Cookies: " +cookies.ToString();
+        cookiesPerSecondText.text = "per second: " + cookiesPerSecond.ToString();
         perSecondUpgrade.text = "+1 Cookies/Second Cost: "+ perSecondCost.ToString();
         perClickUpgrade.text = "+1 Cookies/Click Cost: "+perClickCost.ToString();
         multiplyUpgrade.text = (cookieMultiplier+1)+"X Cookies/Click Cost: "+ multiplierCost.ToString();
@@ -56,6 +58,7 @@ public class cookie_script : MonoBehaviour
         
         //text
         cookieText.text = "Cookies: " +cookies.ToString();
+        cookiesPerSecondText.text = "per second: " + cookiesPerSecond.ToString();
         perSecondUpgrade.text = "+1 Cookies/Second Cost: "+perSecondCost.ToString();
         perClickUpgrade.text = "+1 Cookies/Click Cost: "+perClickCost.ToString();
         multiplyUpgrade.text = (cookieMultiplier+1)+"X Cookies/Click Cost: "+ multiplierCost.ToString();
