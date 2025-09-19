@@ -501,6 +501,7 @@ MonoBehaviour:
   multiplyUpgrade: {fileID: 2014530173}
   clickSound: {fileID: 8300000, guid: 82b54c5e076b81f448e71bbea934a719, type: 3}
   backgroundMusic: {fileID: 8300000, guid: b2784f1dad1138c4c8939d6850294af4, type: 3}
+  purchaseSound: {fileID: 8300000, guid: 3c2b70a3de00df442a1b0948b296feb0, type: 3}
   sound: {fileID: 565784074}
   music: {fileID: 565784075}
 --- !u!4 &565784073
@@ -747,7 +748,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 500, y: 300}
-  m_SizeDelta: {x: 650, y: 450}
+  m_SizeDelta: {x: 600, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &763701986
 MonoBehaviour:
@@ -1483,7 +1484,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 500, y: -200}
-  m_SizeDelta: {x: 650, y: 450}
+  m_SizeDelta: {x: 600, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1148077049
 MonoBehaviour:
@@ -1781,7 +1782,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 500, y: 50}
-  m_SizeDelta: {x: 650, y: 450}
+  m_SizeDelta: {x: 600, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2023454668
 MonoBehaviour:
