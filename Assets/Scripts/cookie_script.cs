@@ -38,11 +38,15 @@ public class cookie_script : MonoBehaviour
     void Start()
     {
         music.PlayOneShot(backgroundMusic); //Music looped
+
         cookieText.text = "Cookies: " +cookies.ToString();
         cookiesPerSecondText.text = "per second: " + cookiesPerSecond.ToString();
         perSecondUpgrade.text = "+1 Cookies/Second Cost: "+ perSecondCost.ToString();
         perClickUpgrade.text = "+1 Cookies/Click Cost: "+perClickCost.ToString();
         multiplyUpgrade.text = (cookieMultiplier+1)+"X Cookies/Click Cost: "+ multiplierCost.ToString();
+
+        music.volume = 0.2f;
+        sound.volume = 0.1f;
     }
 
     // Update is called once per frame
@@ -64,6 +68,12 @@ public class cookie_script : MonoBehaviour
         multiplyUpgrade.text = (cookieMultiplier+1)+"X Cookies/Click Cost: "+ multiplierCost.ToString();
 
         
+    }
+    //called from the slider in settings panel
+    public void setVolume(float value)
+    {
+        music.volume = value;
+        sound.volume = value-0.1f;
     }
 
     //Function for when cookie button is clicked
