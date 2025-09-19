@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Cookie-Clicker.sln"
+    "dotnet.defaultSolution": "Cookie Clicker.sln"
 }
