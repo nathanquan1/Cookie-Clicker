@@ -93,7 +93,7 @@ public class cookie_script : MonoBehaviour
             sound.PlayOneShot(purchaseSound);
             cookies -= perClickCost;
             cookiesPerClick +=1;
-            perClickCost = cookiesPerClick +19;
+            perClickCost += 3;
         }
         
         
@@ -106,7 +106,7 @@ public class cookie_script : MonoBehaviour
             sound.PlayOneShot(purchaseSound);
             cookies -= perSecondCost;
             cookiesPerSecond += 1;
-            perSecondCost = cookiesPerSecond + 19;
+            perSecondCost += 3;
         }
     }
 //Adds 1x every time (1x,2x,3x)
